@@ -17,7 +17,7 @@ export.writerow(['Aluno', 'Nota Final'])
 
 dados['Nota Final'] = 0
 
-gabarito = ['A','B','C','A','A','D','B','C','C','B','A','B','D','A','D']
+gabarito = ['B','D','D','C','C','B','A','D','C','D','A','C','B','B','D']
 
 
 
