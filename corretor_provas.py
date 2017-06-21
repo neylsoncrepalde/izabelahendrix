@@ -19,8 +19,10 @@ dados['Nota Final'] = 0
 
 print("O banco de dados tem {} colunas".format(len(dados.columns)))
 
-gabarito = ['B','D','D','C','C','B','A','D','C','D','A','C','B','B','D']
-
+gabarito = ['E','C','E','C','B','B','A','A','C','E',
+            'E','D','D','D','E','E','A','B','B','C',
+            'B','E','E','C','D','C','D','B','B','B',
+            'A','E','B','C','C']
 
 
 nota = 0
