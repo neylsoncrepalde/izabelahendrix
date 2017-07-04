@@ -8,13 +8,13 @@ import pandas as pd
 import csv
 
 print("Digite o nome do arquivo do banco de dados:")
-#nome_do_arquivo = input()
-nome_do_arquivo = "~/Documentos/Corretor testes/aval_int_20171_teste.csv"
+nome_do_arquivo = input()
+#nome_do_arquivo = "~/Documentos/Corretor testes/aval_int_20171_teste.csv"
 dados = pd.read_csv(nome_do_arquivo, sep = ',')
 
 saida = open('notas_'+str(nome_do_arquivo)[:-4]+'.csv', 'w')
 export = csv.writer(saida, quoting = csv.QUOTE_NONNUMERIC)
-export.writerow(['Nome', 'Nota Final'])
+export.writerow(['Nome','Período','Nota Final'])
 
 dados['Nota Final'] = 0
 
@@ -40,7 +40,7 @@ for row in dados.index:   #Alunos
             
     print("Nota final: {}\n".format(nota/total))
     dados.iloc[row, len(dados.columns)-1] = nota/total
-    export.writerow([dados["NOME"][row], nota])
+    export.writerow([dados["NOME"][row], dados["PERIODO"][row], nota/total])
 
 print(dados[['NOME','Nota Final']])
 
